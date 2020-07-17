@@ -12,6 +12,13 @@ composer config -l -g
 ##下载laravel镜像
 composer create-project --prefer-dist laravel/laravel blog "5.4.*"
 
+##下载laravel的代码提示工具
+composer require barryvdh/laravel-ide-helper "2.4.0"
+（不加版本号为最新版本）
+####接下来在config/app.php的providers数组添加
+Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+####最后执行命令
+php artisan ide-helper:generate
 
 >laravel版本是5.4.30
 
