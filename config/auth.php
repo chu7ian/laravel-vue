@@ -34,8 +34,13 @@ return [
     | Supported: "session", "token"
     |
     */
-
+//通过 session 来维护用户登录的状态
     'guards' => [
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin2',
+        ],
+
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
@@ -63,8 +68,19 @@ return [
     | Supported: "database", "eloquent"
     |
     */
-
+//登录以及访问页面的时候获取用户的信息
     'providers' => [
+
+        'admin1' => [
+            'driver' => 'eloquent',
+            'model' => \App\Model\Admin::class, //模型
+        ],
+
+         'admin2' => [
+             'driver' => 'database',
+             'table' => 'admins', //表名
+         ],
+
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
