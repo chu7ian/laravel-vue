@@ -25,3 +25,8 @@ php artisan ide-helper:generate
 >php版本7.3.4
 
 >mysql版本5.7.26
+
+#从github下载需要执行以下命令：
+1. composer install
+2. 复制一份.env文件
+3. php artisan key:generate
