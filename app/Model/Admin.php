@@ -7,5 +7,5 @@ use Illuminate\Foundation\Auth\User; //需要继承Auth认证
 
 class Admin extends User
 {
-
+    protected $rememberTokenName = '';
 }
