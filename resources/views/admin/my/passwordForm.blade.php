@@ -6,11 +6,11 @@
     <br>
     <form action="" method="post">
         {{csrf_field()}}
-        原密码：<input type="password" name="original_password" value="">
+        原密码：<input type="text" name="original_password" value="">
         <br>
-        新密码：<input type="password" name="password" value="">
+        新密码：<input type="text" name="password" value="">
         <br>
-        确认密码：<input type="password" name="confirm_password" value="">
+        确认密码：<input type="text" name="password_confirmation" value="">
         <br>
         <input type="submit" value="提交">
     </form>
