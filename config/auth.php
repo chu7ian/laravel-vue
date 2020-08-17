@@ -34,7 +34,7 @@ return [
     | Supported: "session", "token"
     |
     */
-//通过 session 来维护用户登录的状态
+//守卫决定 如何 对每个请求的用户 进行身份验证
     'guards' => [
         'admin' => [
             'driver' => 'session',
@@ -68,7 +68,8 @@ return [
     | Supported: "database", "eloquent"
     |
     */
-//登录以及访问页面的时候获取用户的信息
+//提供者决定 如何 从持久储存中 检索用户
+//支持2种检索用户方式：1、Eloquent   2、数据库查询生成器
     'providers' => [
 
         'admin1' => [
